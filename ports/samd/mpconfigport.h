@@ -2,7 +2,7 @@
 #include "mpconfigcommon.h"
 #include "mpconfigboard.h"
 
-#define ARDUPY
+#define OPENMV
 
 #define MICROPY_PY_REVERSE_SPECIAL_METHODS  (1)
 
