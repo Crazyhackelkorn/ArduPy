@@ -41,3 +41,6 @@
 [submodule "ports/samd/lib/tinyUSB"]
 	path = ports/samd/lib/tinyUSB
 	url = https://github.com/adafruit/Adafruit_TinyUSB_Arduino.git
+[submodule "shared-bindings/ulab"]
+	path = shared-bindings/ulab
+	url = https://github.com/v923z/micropython-ulab.git
