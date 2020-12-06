@@ -2,6 +2,10 @@
 #include "mpconfigcommon.h"
 #include "mpconfigboard.h"
 
+#define ARDUPY
+
+#define MICROPY_PY_REVERSE_SPECIAL_METHODS  (1)
+
 // fatfs configuration
 #define MICROPY_PY_BUILTINS_COMPLEX (1)
 #define MICROPY_HW_ENABLE_STORAGE (1)
@@ -73,6 +77,7 @@ extern const struct _mp_obj_module_t math_module;
 extern const struct _mp_obj_module_t random_module;
 extern const struct _mp_obj_module_t uheap_module;
 extern const struct _mp_obj_module_t ustack_module;
+extern const struct _mp_obj_module_t ulab_user_cmodule;
 
 #ifdef ARDUPY_MODULE
 extern const struct _mp_obj_module_t mp_module_arduino;
@@ -129,11 +134,12 @@ extern const struct _mp_obj_module_t mp_module_arduino;
     { MP_OBJ_NEW_QSTR(MP_QSTR_io), (mp_obj_t)&mp_module_io },                        \
     { MP_OBJ_NEW_QSTR(MP_QSTR_select), (mp_obj_t)&mp_module_uselect },               \
     { MP_OBJ_NEW_QSTR(MP_QSTR_zlib), (mp_obj_t)&mp_module_uzlib },                   \
-     { MP_OBJ_NEW_QSTR(MP_QSTR_machine), (mp_obj_t)&mp_module_machine },             \
+    { MP_OBJ_NEW_QSTR(MP_QSTR_machine), (mp_obj_t)&mp_module_machine },             \
     JSON_MODULE                                                                      \
     ERRNO_MODULE                                                                     \
     RE_MODULE                                                                        \
     ARDUPY_PY_MODULE                                                                 \
+    { MP_OBJ_NEW_QSTR(MP_QSTR_ulab), (mp_obj_t)&ulab_user_cmodule },             \
 
     
 
