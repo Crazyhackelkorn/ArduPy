@@ -1,11 +1,7 @@
 #include <stdint.h>
 #include "mpconfigcommon.h"
 #include "mpconfigboard.h"
-
-#define OPENMV
-
-#define MICROPY_PY_REVERSE_SPECIAL_METHODS (1)
-#define MICROPY_PY_ALL_REVERSE_SPECIAL_METHODS (1)
+#include "my_ulab_config.h"
 
 // fatfs configuration
 #define MICROPY_PY_BUILTINS_COMPLEX (1)
